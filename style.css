@@ -44,9 +44,10 @@ img {
     margin-top: 2rem;
     color: aliceblue;
     font-size: 1.5rem;
+    height: 2.5rem;
 }
 .labels {
-    width: 10rem;
+    width: 12rem;
     display: flex;
     justify-content: space-around;
 }
@@ -58,14 +59,25 @@ img {
     background-color: #2c7b6f;
     border-radius: 50%;
     transition: 0.2s;
-    padding: 0.2rem;
+}
+.label span {
+    display: block;
+    /* background-position: right top; */
+    width: 3rem;
+    height: 3rem;
+    margin-top: -0.75rem;
+    margin-left: -0.75rem;
 }
 .label:hover {
     border-color: #17dec0;
     background-color: #17dec0;
     cursor: pointer;
+    transform: scale(1.1);
 }
 input {
+    display: none;
+}
+.t {
     display: none;
 }
 #s1:checked ~ .text-wrapper .labels .s1 {
@@ -73,7 +85,6 @@ input {
 }
 #s2:checked ~ .text-wrapper .labels .s2 {
     background: none;
-
 }
 #s3:checked ~ .text-wrapper .labels .s3 {
     background: none;
@@ -92,4 +103,16 @@ input {
 }
 #s4:checked ~ .slider {
     margin-left: -300%;
+}
+#s1:checked ~ .text-wrapper .text .t1 {
+    display: inline;
+}
+#s2:checked ~ .text-wrapper .text .t2 {
+    display: inline;
+}
+#s3:checked ~ .text-wrapper .text .t3 {
+    display: inline;
+}
+#s4:checked ~ .text-wrapper .text .t4 {
+    display: inline;
 }
