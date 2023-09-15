@@ -45,6 +45,7 @@ img {
     color: aliceblue;
     font-size: 1.5rem;
     height: 2.5rem;
+    overflow: hidden;
 }
 .labels {
     width: 12rem;
@@ -77,21 +78,23 @@ img {
 input {
     display: none;
 }
+.text {
+    height: 400%;
+    margin-top: 0;
+    transition: 0.2s;
+}
 .t {
-    display: none;
+    display: block;
+    line-height: 2.5rem;
 }
-#s1:checked ~ .text-wrapper .labels .s1 {
-    background: none;
-}
-#s2:checked ~ .text-wrapper .labels .s2 {
-    background: none;
-}
-#s3:checked ~ .text-wrapper .labels .s3 {
-    background: none;
-}
+#s1:checked ~ .text-wrapper .labels .s1,
+#s2:checked ~ .text-wrapper .labels .s2,
+#s3:checked ~ .text-wrapper .labels .s3,
 #s4:checked ~ .text-wrapper .labels .s4 {
     background: none;
+    cursor: default;
 }
+
 #s1:checked ~ .slider {
     margin-left: 0;
 }
@@ -104,15 +107,15 @@ input {
 #s4:checked ~ .slider {
     margin-left: -300%;
 }
-#s1:checked ~ .text-wrapper .text .t1 {
-    display: inline;
+#s1:checked ~ .text-wrapper .text {
+    margin-top: 0;
 }
-#s2:checked ~ .text-wrapper .text .t2 {
-    display: inline;
+#s2:checked ~ .text-wrapper .text {
+    margin-top: -2.5rem;
 }
-#s3:checked ~ .text-wrapper .text .t3 {
-    display: inline;
+#s3:checked ~ .text-wrapper .text {
+    margin-top: -5rem;
 }
-#s4:checked ~ .text-wrapper .text .t4 {
-    display: inline;
+#s4:checked ~ .text-wrapper .text {
+    margin-top: -7.5rem;
 }
