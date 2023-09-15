@@ -118,4 +118,5 @@ input {
 }
 #s4:checked ~ .text-wrapper .text {
     margin-top: -7.5rem;
+    
 }
