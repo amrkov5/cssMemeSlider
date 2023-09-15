@@ -18,10 +18,10 @@ body {
 }
 .slider {
     display: flex;
-    width: 400%;
+    width: 500%;
     height: fit-content;
+    align-items: center;
     /* background-color: aquamarine; */
-    margin-left: -100%;
     transition: 0.5s;
 }
 .img-wrapper {
@@ -38,6 +38,10 @@ img {
     height: auto;
     border-radius: 2%;
 }
+.p4 {
+    width: 75%;
+    height: auto;
+}
 .text-wrapper {
     display: flex;
     justify-content: space-between;
@@ -48,9 +52,10 @@ img {
     overflow: hidden;
 }
 .labels {
-    width: 12rem;
+    width: 14rem;
     display: flex;
     justify-content: space-around;
+    align-self: center;
 }
 .label {
     display: block;
@@ -79,18 +84,20 @@ input {
     display: none;
 }
 .text {
-    height: 400%;
+    height: 500%;
     margin-top: 0;
     transition: 0.2s;
 }
 .t {
     display: block;
     line-height: 2.5rem;
+    font-size: 2rem;
 }
 #s1:checked ~ .text-wrapper .labels .s1,
 #s2:checked ~ .text-wrapper .labels .s2,
 #s3:checked ~ .text-wrapper .labels .s3,
-#s4:checked ~ .text-wrapper .labels .s4 {
+#s4:checked ~ .text-wrapper .labels .s4,
+#s5:checked ~ .text-wrapper .labels .s5 {
     background: none;
     cursor: default;
 }
@@ -107,6 +114,9 @@ input {
 #s4:checked ~ .slider {
     margin-left: -300%;
 }
+#s5:checked ~ .slider {
+    margin-left: -400%;
+}
 #s1:checked ~ .text-wrapper .text {
     margin-top: 0;
 }
@@ -118,5 +128,7 @@ input {
 }
 #s4:checked ~ .text-wrapper .text {
     margin-top: -7.5rem;
-    
+}
+#s5:checked ~ .text-wrapper .text {
+    margin-top: -10rem;
 }
